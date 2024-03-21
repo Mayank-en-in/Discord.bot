@@ -9,7 +9,6 @@ intents.presences = False
 intents.messages = True
 intents.message_content = True
 
-bot_token= "MTIxOTU5NjYyNjc2MzcxNDY1Mw.GsqrCw.7CYe-qy_Go1HRNufCuMKECWaN9U--UynDC8OKk"
 
 command_prefix='!'
 
@@ -152,7 +151,7 @@ async def on_message(message):
 
 class ReactionBot():
     def __init__(self,):
-        self.token='MTIxOTU5NjYyNjc2MzcxNDY1Mw.GsqrCw.7CYe-qy_Go1HRNufCuMKECWaN9U--UynDC8OKk'
+        self.token=str(os.environ.get('TOKEN'))
 
     def runBot(self):
         bot.run(token=self.token)
