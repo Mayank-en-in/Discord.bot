@@ -142,7 +142,7 @@ async def on_message(message):
         await message.add_reaction('🆒')
         await message.add_reaction('🧊')
 
-    if numbers in message.content.lower() and not any(char.isalpha() for char in message.content.lower()):
+    if message.content.lower().isdigit():
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificado:1220294706240552990')
         
