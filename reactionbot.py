@@ -9,7 +9,7 @@ intents.presences = False
 intents.messages = True
 intents.message_content = True
 
-
+numbers=[1,2,3,4,5,6,7,8,9,0]
 command_prefix='!'
 
 # bot = commands.Bot(command_prefix='!', intents=intents)
@@ -142,7 +142,7 @@ async def on_message(message):
         await message.add_reaction('🆒')
         await message.add_reaction('🧊')
 
-    if any(char.isdigit() for char in message.content):
+    if numbers in message.content.lower() and not any(char.isalpha() for char in message.content.lower()):
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificado:1220294706240552990')
         
