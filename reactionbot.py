@@ -101,8 +101,8 @@ async def on_message(message):
         await message.add_reaction('👋')
 
     if 'ok' in message.content.lower() or 'okii' == message.content.lower():
-        await message.add_reaction(':ok:')
-        await message.add_reaction(':thumbsup:')
+        await message.add_reaction('🆗')
+        await message.add_reaction('👍')
 
     if 'what' in message.content.lower() or 'wat' in message.content.lower() or 'wht' in message.content.lower() or 'why' in message.content.lower():
         await message.add_reaction('❓')
