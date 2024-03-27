@@ -145,7 +145,8 @@ async def on_message(message):
     if message.content.lower().isdigit():
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificado:1220294706240552990')
-       if 'cool' in message.content.lower():
+    if 'cool' in message.content.lower():
+      
         await message.add_reaction('🆒')
         await message.add_reaction('🧊')
         
