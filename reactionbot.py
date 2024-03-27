@@ -145,6 +145,22 @@ async def on_message(message):
     if message.content.lower().isdigit():
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificado:1220294706240552990')
+       if 'cool' in message.content.lower():
+        await message.add_reaction('🆒')
+        await message.add_reaction('🧊')
+        
+    if '<@821736045322174475>' in message.content.lower():
+        await message.add_reaction(':ridercatsleep:1222471552080281660')
+
+    if any(char.isdigit() for char in message.content):
+        #await message.add_reaction('🔢')
+        await message.add_reaction(':verifiedverificado:1220294706240552990')
+
+     # Check if the target user is mentioned in the message
+    if target_user_id in [mention.id for mention in message.mentions]:
+        # Replace the 'busy_message' string with the desired message
+        busy_message = "I'm sorry, The 'LordNightRider' is Sleeping in the Server's Darkest Room. Please Let him Sleep Right now and try messaging later."
+        await message.channel.send(busy_message)
         
 
     await bot.process_commands(message)
