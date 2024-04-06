@@ -148,9 +148,9 @@ async def on_message(message):
     if '<@958665049948430366>' in message.content.lower():
         await message.add_reaction('💀')
 
-    if  (message.content).isdigit():
+    if  (message.content.lower()).isdigit():
         #await message.add_reaction('🔢')
-        await message.add_reaction(':verifiedverificado:1220294706240552990')
+        await message.add_reaction(':verifiedverificasdo:1220294706240552990')
 
      # Check if the target user is mentioned in the message
     if target_user_id in [mention.id for mention in message.mentions]:
