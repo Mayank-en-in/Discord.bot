@@ -11,7 +11,7 @@ intents.message_content = True
 
 numbers=[1,2,3,4,5,6,7,8,9,0]
 command_prefix='!'
-
+target_user_id = 821736045322174475
 # bot = commands.Bot(command_prefix='!', intents=intents)
 bot = commands.Bot(command_prefix='!',
                    status=discord.Status.idle,
