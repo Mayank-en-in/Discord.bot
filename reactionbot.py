@@ -97,10 +97,10 @@ async def on_message(message):
         await message.add_reaction('🇪')
         await message.add_reaction('✅')
 
-    if 'hi' == message.content.lower() or 'baii' in message.content.lower() or 'hello' in message.content.lower() or 'bye' in message.content.lower():
+    if 'hi' == message.content.lower() or 'baii' in message.content.lower() or 'hello' in message.content.lower() or 'bye' in message.content.lower() or 'Welcome' in message.content.lower() or 'Left' in message.content.lower():
         await message.add_reaction('👋')
 
-    if 'ok' in message.content.lower() or 'okii' == message.content.lower():
+    if 'ok' == message.content.lower() or 'okii' == message.content.lower():
         await message.add_reaction('🆗')
         await message.add_reaction('👍')
 
@@ -141,29 +141,24 @@ async def on_message(message):
     if 'cool' in message.content.lower():
         await message.add_reaction('🆒')
         await message.add_reaction('🧊')
-
-    if message.content.lower().isdigit():
-        #await message.add_reaction('🔢')
-        await message.add_reaction(':verifiedverificado:1220294706240552990')
-    if 'cool' in message.content.lower():
-      
-        await message.add_reaction('🆒')
-        await message.add_reaction('🧊')
         
     if '<@821736045322174475>' in message.content.lower():
         await message.add_reaction(':ridercatsleep:1222471552080281660')
 
-    if any(char.isdigit() for char in message.content):
+    if '<@958665049948430366>' in message.content.lower():
+        await message.add_reaction('💀')
+
+    if  (message.content).isdigit():
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificado:1220294706240552990')
 
      # Check if the target user is mentioned in the message
     if target_user_id in [mention.id for mention in message.mentions]:
         # Replace the 'busy_message' string with the desired message
-        busy_message = "I'm sorry, The 'LordNightRider' is Sleeping in the Server's Darkest Room. Please Let him Sleep Right now and try messaging later."
+        busy_message = "I'm sorry, The 'LordNightRider' is gone for sleep in the Server's Darkest Room. Please Let him Sleep Right now and try messaging later."
         await message.channel.send(busy_message)
-        
 
+        
     await bot.process_commands(message)
 
 class ReactionBot():
