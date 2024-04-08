@@ -145,15 +145,12 @@ async def on_message(message):
     if '<@821736045322174475>' in message.content.lower():
         await message.add_reaction(':ridercatsleep:1222471552080281660')
 
-    if '<@958665049948430366>' in message.content.lower():
-        await message.add_reaction('💀')
-
     if  (message.content.lower()).isdigit():
         #await message.add_reaction('🔢')
         await message.add_reaction(':verifiedverificasdo:1220294706240552990')
 
      # Check if the target user is mentioned in the message
-    if target_user_id in [mention.id for mention in message.mentions] and message.reference is None:
+    if target_user_id in [mention.id for mention in message.mentions] and message.reference is None and client.get_user(821736045322174475).status != discord.Status.online:
         # Replace the 'busy_message' string with the desired message
         busy_message = "I'm sorry, The 'LordNightRider' is gone for sleep in the Server's Darkest Room. Please Let him Sleep Right now and try messaging later."
         await message.channel.send(busy_message)
