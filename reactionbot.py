@@ -153,7 +153,7 @@ async def on_message(message):
         await message.add_reaction(':verifiedverificasdo:1220294706240552990')
 
      # Check if the target user is mentioned in the message
-    if target_user_id in [mention.id for mention in message.mentions]:
+    if target_user_id in [mention.id for mention in message.mentions] and message.reference is None:
         # Replace the 'busy_message' string with the desired message
         busy_message = "I'm sorry, The 'LordNightRider' is gone for sleep in the Server's Darkest Room. Please Let him Sleep Right now and try messaging later."
         await message.channel.send(busy_message)
